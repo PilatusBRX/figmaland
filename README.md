@@ -12,6 +12,9 @@
 
 <img src="screenshot/screenshot-3.jpg"/>
 
+<h2>Instruções sobre instalação via banco de dados</h2>
+<p>Eu deixei na pasta Banco de dados o arquivo sql e a pasta completa WP Content para instalar o site de forma diferente da anterior</p>
+
 <h2>Sobre o site construído:</h2>
 
 <p>Todos os campos são dinâmicos e editáveis na página home;
