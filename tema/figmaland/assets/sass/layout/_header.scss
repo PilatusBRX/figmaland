@@ -1,0 +1,98 @@
+ .header .flex {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     margin: auto;
+     width: 100%;
+     max-width: 900px;     
+ }
+
+.header{    
+    position: relative; 
+    padding-top: 20px;
+    z-index: 9999;         
+        &__nav{
+            &--list{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                li{
+                    a{
+                        color: $white;
+                        margin: 0 10px;
+                        font-size: 15px;
+                        font-weight: 400;
+                        font-family: GraphikRegular;
+                        position: relative;
+                        display: inline-block;                      
+                        transition: color 0.3s;
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            transform: scaleX(0);
+                            height: 2px;
+                            border-radius: 1.75px;
+                            top: 18px;
+                            bottom: 0;
+                            left: 0;
+                            background-color: $white;
+                            transform-origin: bottom right;
+                            transition: transform 0.25s cubic-bezier(0.86, 0, 0.07, 1);
+                        }
+                        &:hover{
+                            &::after{
+                                transform: scaleX(1);
+                                transform-origin: bottom left;
+                            }
+                        }
+
+                    }
+                }
+               
+            }
+        }
+        &__logo{
+            @include respond(tab-land){
+                margin-left: 15px;
+            }
+            img{
+                vertical-align: middle;
+            }
+        }
+        &__social{
+            display: flex;
+            flex-direction: row;            
+            align-items: center;
+            height: 100%;
+            margin-left: 150px; 
+            gap: 14px;            
+            li{                
+                margin-top: 15px;
+                a{                    
+                    img{
+                        transition: 0.5s all ease-in-out;
+                        position: relative;
+                        top: 8px;                        
+                        &:hover {
+                            transform: translateY(20px);
+                        }
+                        
+                    }
+                }
+            }        
+        }
+    }
+    
+ 
+.desk-menu {
+    @include respond(tab-port) {
+        display: none!important;
+    }
+}
+    
+        
+    
+ 
