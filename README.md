@@ -21,4 +21,4 @@ A área de parceiros são editáveis e foi construído com Custom post type;</p>
 
 ## o site foi contruído com a última versão do Worpress, que é 6.5 e usado PHP versão 8.123. 
 
-## Senha e usuário serão fornecidos pelo e-mail: hellostudiocontato@gmail.com
+## Senha e usuário serão fornecidos pelo e-mail: <p>hellostudiocontato@gmail.com</p>
