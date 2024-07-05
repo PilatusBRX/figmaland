@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+scroll-behavior: smooth;
+overflow-x: hidden;
+}
+::selection {
+    background-color: $primary-color;
+    color: $white;
+}
+body{      
+overflow-x: hidden!important;       
+}
+main{
+    width: 100%;     
+}
+button{
+    cursor: pointer;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}

@@ -1,0 +1,574 @@
+@media screen and (max-width: 992px){
+.img-field--desktop {
+        display: none;       
+    }
+
+    .img-field--mobile {
+        display: block;
+        
+    }
+}
+@media screen and (min-width: 993px){
+.img-field--desktop {
+        display: block;
+    }
+
+    .img-field--mobile {
+        display: none;
+    }
+}
+
+.hero{ 
+    @include respond(phone) {
+         margin-bottom: 100px;
+    }
+    img{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        height: 850px;
+        @include respond(phone) {
+            object-fit: cover;            
+       }
+       
+    }
+    &__content{
+        padding: 150px 0 40px 0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        max-width: 700px;
+        margin: auto;
+        text-align: center; 
+        @include respond(phone) {
+            top: -50px;        
+        }
+        *{
+            color: $white;          
+        }
+        &--title{
+            margin-bottom: 20px;
+            @include respond(phone){
+                padding: 0 10px;
+            }
+        }
+        &--text{            
+            width: 90%;
+            margin-bottom: 40px;
+        }
+        &--btn{
+            @include button;
+            font-weight: 400;
+            width: 236px;
+            height: 52px;
+            line-height: 52px;
+            font-family: GraphikRegular;
+        }        
+       
+    }
+}
+
+.features{
+    padding: 320px 0 0 0;    
+    text-align: center; 
+    @include respond(phone) {
+        padding: 100px 0 0 0;
+    }
+    &__title{        
+        margin-bottom: 40px;
+    }
+    &__text{
+        width: 60%;
+        margin: auto;
+        @include respond(phone) {
+            width: 80%;
+        }
+    }
+    &__blocks{       
+        display: flex;
+        flex-direction: row;      
+        margin: 80px auto;
+        @include respond(phone) {
+            flex-direction: column;          
+        }
+        &--item {
+            @include respond(phone) {
+                margin-bottom: 80px;
+            }
+            h3{
+               margin: 20px auto; 
+               width: 50%;           
+            }
+           
+            p{
+               color: $dark-grey; 
+               font-weight: 400;
+               font-size: 18px;
+               line-height: 25px;
+               text-align: center;
+               width: 65%;
+               margin: auto;
+            }
+        }
+    }
+    
+}
+.organize{
+    padding-bottom: 226px;    
+    @include respond(tab-port) {
+        padding-bottom: 0;
+        margin-bottom: 50px;
+    }
+    &__title{        
+        @include respond(tab-port) {
+            text-align: center;
+            margin: auto;
+            width: 85%;
+        }
+    }
+    &__text{
+        margin: 40px auto 60px 0;
+        width: 85%;
+        @include respond(tab-port) {
+            text-align: center;          
+            width: 95%;
+            margin: 17px auto 70px auto;
+         }
+    }
+    img{
+        height: auto;
+        width: 100%;       
+        
+    }
+    &__btn{
+        @include button;  
+        padding: 10px 32px;
+        font-family: GraphikRegular;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;        
+        @include respond(tab-port) {          
+            margin-bottom: 60px;
+        }
+    }
+    img{
+        @include respond(phone) {
+                width: 100%;
+                max-width: 350px;
+                margin-left: 8px;
+            }
+    }
+    .organize-block{
+        display: flex;
+        flex-direction: column;       
+        height: 100%;
+       align-self: center;
+        @include respond(tab-port) {
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+.prototyping{  
+    &__img{
+        img{
+            width: 85%; 
+            @include respond(phone) {
+                width: 100%;
+            }
+        }
+    }
+    .prototyping__img--mobile{
+        @include respond(phone) {
+            margin: 85px auto;
+            width: 100%;
+        }
+    }
+    &__subscribe{
+        margin-top: 50px;
+        @include respond(phone) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+        }
+             
+        &--title{
+            margin-bottom: 10px;
+            margin-left: -50px;
+            @include respond(phone) {
+                margin-left: 0;
+                text-align: center;
+            }
+            
+        }
+        &--text {
+            margin-bottom: 15px;
+            margin-left: -50px;
+            @include respond(phone) {
+                margin-left: 0;
+                text-align: center;
+            }
+        }
+    }
+    &__form{ 
+        margin-left: -50px; 
+        @include respond(phone) {
+            margin-left: 0;
+        }
+        &--text {
+            color: $dark-grey;
+            margin-bottom: 28px;            
+
+        }
+        input{
+          @include inputfield;
+            @include respond(phone) {
+                width: 100%;
+                display: block;
+                left: 8px;
+                position: relative;
+                margin-bottom: 12px;
+            }
+        }  
+        button{
+            font-size: 20px;
+            line-height: 20px;
+            font-family: GraphikRegular;
+            border: none;
+            border-radius: 35px;
+            background-color: $primary-color;
+            color: $white;
+            font-weight: 400;
+            font-family: GraphikRegular;
+            width: 172px;
+            height: 54px;
+            padding: 19px 39px;
+            transition: all ease .5s;
+            margin-left: 12px;
+            top: 5px;
+            position: relative;
+            @include respond(phone) {
+                width: 100%;
+                display: block;
+            }
+            &:hover{
+                background-color: $white;
+                color: $primary-color;
+                border: 1px solid $white;
+                box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .125);
+            }
+        }
+    }
+    form{
+        @include respond(phone) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.partners{
+    padding: 80px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    @include respond(phone) {
+        padding: 130px 0;
+    }
+    &__title{
+        margin-bottom: 17px;
+    }
+    &__text{        
+        width: 45%;
+        margin: auto;
+        margin-bottom: 80px;
+        @include respond(tab-port) {
+            width: 90%;
+        }
+    }
+    &__btn{
+        @include button;
+    }
+    &__brands{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 1140px;
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 80px;
+        &--item{
+            border: 1px solid #D8D8D8;
+            padding: 25px 40px;
+            width: 250px;
+            height: 165px; 
+            overflow: hidden;
+            @include respond(phone) {
+                margin-bottom: 30px;   
+            }
+            h6{
+                color: #374754;
+                font-family: GraphikRegular;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 23px;
+                margin-bottom: 15px;               
+            }
+            img{
+                width: 95%;
+                transition: 0.5s all ease-in-out;
+                &:hover{
+                    transform: scale(1.5);
+                }
+            }
+        }
+    }
+    &__btn{
+        @include button;
+        padding: 16px 50px;
+    }
+
+}
+
+.testimonials{    
+    padding: 100px 0;
+    @include respond(phone) {
+        padding-top: 50px;
+    }
+    &__title{
+       text-align: center;
+       margin-bottom: 80px;       
+    }
+    &__slider{
+        text-align: center;
+        margin: auto;        
+        &--text{
+            margin: 60px auto;
+            width: 65%;
+            @include respond(phone) {
+                width: 90%;
+            }
+            
+        }
+        &--user{
+            display: flex;
+            gap: 13px;
+            margin: auto;
+            width: 200px;
+            .text-field{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h6{
+                    font-family: GraphikRegular;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 23px;
+                    color: $dark-grey;
+                }
+                p{
+                    font-family: GraphikRegular;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 23px;
+                    color: $dark-grey;
+                    margin-left: -32px;
+                }
+            }
+        }
+        &--btn{            
+            @include button;
+            padding: 16px 50px;
+            margin: auto;
+            top: 82px;
+            position: relative;
+        }
+    }
+}
+
+.contact{
+    padding: 200px 0 50px 0;
+    @include respond(phone) {
+        padding-top: 120px;      
+    }
+    &__title{
+        text-align: center;
+    }
+    &__text{
+        text-align: center;        
+        width: 45%;
+        margin: 17px auto 50px auto;
+        @include respond(tab-port){
+            width: 90%;
+        }
+    }
+    &__area{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: auto;
+        gap: 50px;
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+        &--form{
+            border: 1px solid #DDDDDD;
+            background-color: $white;
+            border-radius: 15px;
+            padding: 52px 50px;
+            flex: 1 1 25%;
+            @include respond(tab-port) {
+                flex: 1 1 100%; 
+                order: 2;       
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                h3{
+                    text-align: center;
+                    margin-bottom: 45px;
+                }
+                input{
+                    @include inputfield;
+                    margin-bottom: 45px;
+                    background-color: #F5F5F5;
+                    @include respond(tab-port) {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+                textarea{                   
+                    background-color: #F5F5F5;                    
+                    padding: 23px 20px;
+                    border: 1px solid #E8E8E8;
+                    font-family: GraphikRegular;
+                    outline-style: none;
+                    margin-bottom: 45px;
+                    @include respond(tab-port) {
+                        display: block;
+                        width: 100%;
+                    }
+                    &::placeholder {
+                        font-size: 14px;
+                        color: #18171D;
+                        font-family: GraphikRegular;
+                    }
+
+                }
+                .btn{
+                    @include button;
+                    font-family: GraphikRegular;
+                    width: 145px;
+                    height: 56px;
+
+                }
+            }
+        }
+        &--locations{
+            position: relative;
+            flex: 1 1 60%; 
+            @include respond(tab-port) {
+                flex: 1 1 100%;
+                order: 1;
+            }
+            .location-items{
+                display: flex;
+                flex-direction: row; 
+                @include respond(tab-port) {
+                    flex-direction: column;                  
+                 }
+                .block{
+                  text-align: center;
+                  margin: auto;
+                  width: 33%;
+                  @include respond(tab-port) {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center; 
+                    justify-content: center;                   
+                    gap: 10px;
+                    height: 100%;
+                    width: max-content;
+                    margin: unset;
+                    padding-left: 30px;
+                    text-align: left;
+                    width: 90%;
+                  }
+                  h5{
+                   margin: 20px auto;
+                   width: 90%;                                      
+                   
+                  }
+               
+                }
+            }
+            .map{                
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                overflow: hidden;
+                @include respond(tab-port) {
+                    display: none;
+                }
+                img{
+                    transition: 0.5s all ease-in-out;
+                    &:hover{
+                        transform: scale(1.5);
+                    }
+                }
+            }
+            .social-links{
+                position: relative;
+                top: 72.5%;
+                display: flex; 
+                flex-direction: row!important; 
+                @include respond(tab-port) {
+                    display: none;
+                }
+                li{
+                    margin-left: 24px;
+                    display: inline-block;
+                }
+            
+            }
+          
+        }
+    }
+    
+}
+
+  .social-links-mobile {      
+    @include respond(tab-port) {
+        width: min-content;
+        display: flex;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);  
+        margin: 60px 0; 
+        gap: 24px;       
+        }
+      li {          
+          display: inline-block;
+      }
+
+  }

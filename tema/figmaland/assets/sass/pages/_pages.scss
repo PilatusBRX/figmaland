@@ -1,0 +1,18 @@
+.page-template-default{
+    background-color:#252B42;
+    *{
+        color: $white;
+    }
+    header{
+        margin-bottom: 100px;
+    }
+    main{
+        padding: 40px 20px 60px 20px;
+        h1,h2,h3,h4,h5,h6,p,a{
+            margin-bottom: 32px;
+        }
+       
+
+    }
+   
+}

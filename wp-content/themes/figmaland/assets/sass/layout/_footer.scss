@@ -1,0 +1,79 @@
+footer{
+    background-color: $dark-black;
+    color: $white;
+    padding: 150px 0;
+    @include respond(tab-port) {
+        padding: 90px 0 0px 0;
+    }
+    .column{
+        &__pages{
+            @include respond(tab-port) {
+                text-align: center;
+                @include respond(tab-port ) {
+                    margin-bottom: 85px;
+                }
+            }
+            &--title{
+                font-family: GraphikBold;
+                color: $white;
+                margin-bottom: 15px;
+                @include respond(tab-port) {
+                    margin-bottom: 15px;
+                }
+
+            }
+            ul{
+                li{                  
+                    margin-bottom: 16px;                    
+                    a{
+                        color: $white;
+                        font-size: 15px;
+                        font-family: GraphikRegular;
+                        transition: all ease .5s;
+                        &:hover{
+                            color: rgba($white, .15);
+                        }
+                    }
+                    
+                }
+            }
+            &--info{                
+                .block{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 8px;
+                    align-items: center;
+                    height: 100%;
+                    margin-bottom: 10px;
+                    p{
+                        font-size: 15px;
+                        line-height: 27px;
+                        color: $dark-grey;
+                        font-weight: 400;
+                        font-family: GraphikRegular;
+                        color: $white;
+                }
+                }
+            }
+            &--social{                  
+                margin-top: 36px;
+                display: flex;
+                flex-direction: row;               
+                gap: 24px;                
+                li{
+                    display: inline-block;                   
+                    align-self: center;
+                }
+            }
+            
+        }
+        .column__pages:last-child {           
+            margin-left: 150px;
+            @include respond(tab-port) {
+                margin-left: 50px;
+                
+            }
+        }
+
+    }
+}

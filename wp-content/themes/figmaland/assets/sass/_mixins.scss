@@ -1,0 +1,65 @@
+@mixin button {
+   width: 236px;
+   height: 60px;
+   border-radius: 35px;
+   background-color: $primary-color;
+   border: 1px solid $primary-color;
+   color: $white;
+   font-weight: bold;
+   font-size: 20px;
+   line-height: 28px;
+   transition: all ease .5s;
+   font-family: GraphikBold;
+   
+   &:hover{
+      background-color: $white;
+      color: $primary-color;
+      border: 1px solid $white;
+      box-shadow: 5px 5px 5px 5px rgba(0,0,0, .125);
+   }
+
+}
+
+@mixin inputfield{
+   border-radius: 39px;
+   background-color: $light-grey;
+   width: 273px;
+   height: 54px;
+   padding: 19px 39px;
+   border: 1px solid #E8E8E8;
+   font-family: GraphikRegular;
+   outline-style: none;
+   &::placeholder {
+      font-size: 14px;
+      color: #18171D;
+      font-family: GraphikRegular;
+   }
+}
+// MEDIA QUERY MANAGER
+@mixin respond($breakpoint) {
+   @if $breakpoint ==phone {
+      @media only screen and (max-width: 720px) {
+         @content
+      };      
+   }
+
+   @if $breakpoint ==tab-port {
+      @media only screen and (max-width: 992px) {
+         @content
+      };      
+   }
+
+   @if $breakpoint ==tab-land {
+      @media only screen and (min-width: 1200px) {
+         @content
+      };      
+   }
+
+   @if $breakpoint ==big-desktop {
+      @media only screen and (min-width: 1800px) {
+         @content
+      };      
+   }
+}
+
+   

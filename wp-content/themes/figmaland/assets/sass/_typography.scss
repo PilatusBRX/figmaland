@@ -1,0 +1,61 @@
+
+@font-face {
+    font-family: 'GraphikRegular';
+    src: url('../fonts/Graphik-Regular.otf') format('opentype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'GraphikBold';
+    src: url('../fonts/Graphik-Bold.otf') format('opentype');
+    font-weight: bold;
+}
+h2{
+    font-size: 48px;
+    line-height: 55px;
+    color: $dark-black;
+    font-weight: 400;
+    font-family: GraphikRegular;
+}
+
+h1 {
+    font-size: 74px;
+    line-height: 84px;
+    color: $white;
+    font-weight: blod;
+    font-family: GraphikBold;
+    @include respond(phone) {
+        font-size: 48px;
+        line-height: 55px;
+        color: $white;
+        font-weight: 400;
+        font-family: GraphikRegular;
+    }
+}
+h3 {
+    font-size: 20px;
+    line-height: 28px;
+    color: $dark-black;
+    font-weight: bold;
+    font-family: GraphikBold;
+}
+h4 {
+    font-size: 28px;
+    line-height: 40px;
+    color: $dark-grey;
+    font-weight: 400;
+    font-family: GraphikRegular;
+}
+h5 {
+    font-size: 16px;
+    line-height: 23px;
+    color: $dark-grey;
+    font-weight: 400;
+    font-family: GraphikRegular;
+}
+p{
+    font-size: 18px;
+    line-height: 25px;
+    color: $dark-grey;
+    font-weight: 400;
+    font-family: GraphikRegular;
+}
